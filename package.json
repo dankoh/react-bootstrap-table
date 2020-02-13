@@ -1,26 +1,20 @@
 {
   "name": "react-bootstrap-table-next",
-  "version": "3.3.4",
-  "description": "Next generation of react-bootstrap-table",
-  "main": "./lib/index.js",
+  "version": "1.0.0",
+  "description": "Forked base table package from reac-bootstrap-table2",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/react-bootstrap-table/react-bootstrap-table2.git"
+    "url": "git+https://github.com/dankoh/react-bootstrap-table.git"
   },
-  "license": "MIT",
   "keywords": [
-    "react",
-    "bootstrap",
-    "table",
-    "grid",
-    "react-component"
-  ],
-  "files": [
-    "lib/",
-    "dist/"
-  ],
-  "tags": [
-    "react"
+    "table"
   ],
   "author": "AllenFang",
   "contributors": [
@@ -45,5 +39,10 @@
     "prop-types": "^15.0.0",
     "react": "^16.3.0",
     "react-dom": "^16.3.0"
-  }
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dankoh/react-bootstrap-table/issues"
+  },
+  "homepage": "https://github.com/dankoh/react-bootstrap-table#readme"
 }
