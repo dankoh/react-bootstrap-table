@@ -125,7 +125,7 @@ class Body extends React.Component {
               className="List"
               height={300}
               itemCount={data.length}
-              itemSize={35}
+              itemSize={50}
               innerElementType={TableBody}
           >
             {Row}

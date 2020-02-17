@@ -1,8 +1,8 @@
 {
   "name": "react-bootstrap-table-next",
   "version": "1.0.0",
-  "description": "Forked base table package from reac-bootstrap-table2",
-  "main": "index.js",
+  "description": "Forked base table package from react-bootstrap-table2",
+  "main": "lib/index.js",
   "directories": {
     "test": "test"
   },
@@ -16,6 +16,10 @@
   },
   "keywords": [
     "table"
+  ],
+  "files": [
+    "lib/",
+    "dist/"
   ],
   "author": "AllenFang",
   "contributors": [
@@ -73,13 +77,13 @@
     "jsdom": "11.2.0",
     "jsdom-global": "3.0.2",
     "lerna": "2.8.0",
-    "node-sass": "4.5.3",
+    "node-sass": "^4.13.1",
     "react-test-renderer": "16.0.0",
     "sass-loader": "6.0.6",
     "sinon": "3.2.1",
     "style-loader": "0.17.0",
     "webpack": "3.5.4",
-    "webpack-dev-server": "3.1.1"
+    "webpack-dev-server": "^3.10.3"
   },
   "license": "ISC",
   "bugs": {
