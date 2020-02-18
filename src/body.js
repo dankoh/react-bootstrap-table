@@ -11,7 +11,15 @@ import RowSection from './row/row-section';
 import Const from './const';
 import withRowSelection from './row-selection/row-consumer';
 import withRowExpansion from './row-expand/row-consumer';
-import { FixedSizeList as List } from 'react-window';
+import { VariableSizeList as List } from 'react-window';
+import { CellMeasurer, CellMeasurerCache } from 'react-virtualized';
+
+const cache = new CellMeasurerCache({
+  defaultWidth: 100,
+  minWidth: 75,
+  fixedHeight: true
+});
+
 
 class Body extends React.Component {
   constructor(props) {
@@ -89,8 +97,8 @@ class Body extends React.Component {
       }
 
 
-      const Row = ({ index, style }) => {
-        const key = _.get(data[index], keyField);
+      const Row = ({  index, isScrolling, key, parent, style }) => {
+        key = _.get(data[index], keyField);
         const row = data[index];
         const baseRowProps = {
           key,
@@ -110,8 +118,17 @@ class Body extends React.Component {
         baseRowProps.style = { ...style, ...UserStyle };
         baseRowProps.className = (_.isFunction(rowClasses) ? rowClasses(data[index], index) : rowClasses);
         return (
-            <this.RowComponent {...baseRowProps} />
+            <CellMeasurer
+                cache={cache}
+                columnIndex={0}
+                key={key}
+                parent={parent}
+                rowIndex={index}
+            >
+              <this.RowComponent {...baseRowProps} />
+            </CellMeasurer>
         );
+
       };
 
       const TableBody = ({ children, ...props }) => (
@@ -125,7 +142,6 @@ class Body extends React.Component {
               className="List"
               height={300}
               itemCount={data.length}
-              itemSize={50}
               innerElementType={TableBody}
           >
             {Row}
