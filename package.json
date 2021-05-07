@@ -44,7 +44,7 @@
     "react-window-dynamic": "^1.8.0-alpha.1",
     "resize-observer-polyfill": "^1.5.1",
     "shortid": "^2.2.15",
-    "underscore": "1.9.1"
+    "underscore": "1.12.1"
   },
   "peerDependencies": {
     "classnames": "^2.2.5",
